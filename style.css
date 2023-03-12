@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('./pictures/minion-1125791.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container-main{
+    text-align: right;
+    padding-top: 3rem;
+    padding-right: 3rem;    
+}
+
+.container-input textarea{
+    width: 22rem; 
+    height: 8rem;
+    border-radius: 1.5rem;
+}
+
+::placeholder{
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.btn{
+    padding-right: 15rem;
+    margin: 1rem 0rem;
+}
+
+.btn button{
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.container-output textarea{
+    width: 22rem; 
+    height: 8rem;
+    border-radius: 1.5rem;  
+}
+
+
+
