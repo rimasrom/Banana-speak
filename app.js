@@ -5,7 +5,7 @@ var textOutput = document.querySelector("#output")
 const url = "https://api.funtranslations.com/translate/minion.json"
 
 function completeUrl(text){
-    return url + "text" + text;
+    return url + "?" + "text=" + text;
 }
 
 function err(){
@@ -14,14 +14,17 @@ function err(){
 
 function clickEventHandler(){
     var input = inputText.value;
-    fetch(completeUrl(inputText))
-    .then(res =>{
-        res.json
-    })
-    .then(output =>{
+    fetch(completeUrl(input))
+    .then(res => res.json())
+    .then(output =>{// console.log(output)
+        // var outputText = output.contents.translation;
         textOutput.innerText = output.contents.translation;
     })
-    .catch(err)
+    .catch(err =>{
+        console.log(err)
+    })
+        
+    
 }
 
 btnTranslate.addEventListener("click", clickEventHandler)
