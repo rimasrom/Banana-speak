@@ -16,9 +16,8 @@ function clickEventHandler(){
     var input = inputText.value;
     fetch(completeUrl(input))
     .then(res => res.json())
-    .then(output =>{// console.log(output)
-        // var outputText = output.contents.translation;
-        textOutput.innerText = output.contents.translation;
+    .then(output =>{
+        textOutput.innerText = output.contents.translation
     })
     .catch(err =>{
         console.log(err)
