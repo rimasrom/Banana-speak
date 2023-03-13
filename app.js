@@ -17,7 +17,7 @@ function clickEventHandler(){
     fetch(completeUrl(input))
     .then(res => res.json())
     .then(output =>{
-        textOutput.innerText = output.contents.translation
+        textOutput.innerText = output.contents.translated
     })
     .catch(err =>{
         console.log(err)
